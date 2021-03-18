@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addFeature } from '../actions';
 
 const Total = props => {
   return (
@@ -8,4 +10,8 @@ const Total = props => {
   );
 };
 
-export default Total;
+const mapActionsToProps = {
+  addFeature
+}
+
+export default connect(null, mapActionsToProps)(Total);
